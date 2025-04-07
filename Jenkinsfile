@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh 'terraform init'
                 sh 'terraform apply -auto-approve'
-                sleep 30
+                sleep 60
             }
         }
 
