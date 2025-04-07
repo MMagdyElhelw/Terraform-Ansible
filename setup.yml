@@ -1,14 +1,5 @@
-- name: Configure EC2 instance
+- name: Hello From AWS
   hosts: ec2
-  become: yes
   tasks:
-    - name: Install Apache
-      yum:
-        name: httpd
-        state: present
-
-    - name: Start Apache
-      service:
-        name: httpd
-        state: started
-        enabled: yes
+    - name: Run a shell command on EC2 instance
+      command: echo "Hello from Ansible!"
